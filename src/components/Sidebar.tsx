@@ -49,9 +49,9 @@ const Sidebar = () => {
           </div>
 
           {/* Name */}
-          <h2 className="text-2xl font-bold text-foreground mb-2">Your Name</h2>
-          <p className="text-sm text-muted-foreground mb-8 text-center">
-            UI/UX Designer & Developer
+          <h2 className="text-2xl font-bold text-foreground mb-2">Jackson Ford</h2>
+          <p className="text-sm text-primary mb-8 text-center uppercase tracking-wider text-xs">
+            UI/UX Designer in Philippines
           </p>
 
           {/* Navigation */}
