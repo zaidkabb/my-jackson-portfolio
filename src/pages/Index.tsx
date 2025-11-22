@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import Work from "@/components/Work";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
+import ChatbotButton from "@/components/ChatbotButton";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <Blog />
         <Contact />
       </main>
+      <ChatbotButton />
     </div>
   );
 };
