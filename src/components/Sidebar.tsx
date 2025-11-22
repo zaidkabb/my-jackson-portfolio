@@ -10,7 +10,11 @@ const Sidebar = () => {
     { icon: Home, label: "Home", href: "#home" },
     { icon: User, label: "About", href: "#about" },
     { icon: Briefcase, label: "Services", href: "#services" },
+    { icon: Code, label: "Skills", href: "#skills" },
+    { icon: User, label: "Education", href: "#education" },
+    { icon: Briefcase, label: "Experience", href: "#experience" },
     { icon: Code, label: "Work", href: "#work" },
+    { icon: User, label: "Blog", href: "#blog" },
     { icon: Mail, label: "Contact", href: "#contact" },
   ];
 
