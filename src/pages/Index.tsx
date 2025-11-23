@@ -7,7 +7,6 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Work from "@/components/Work";
-import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import ChatbotButton from "@/components/ChatbotButton";
 
@@ -24,7 +23,6 @@ const Index = () => {
         <Education />
         <Experience />
         <Work />
-        <Blog />
         <Contact />
       </main>
       <ChatbotButton />
