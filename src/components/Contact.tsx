@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -33,74 +32,74 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-secondary/30">
+    <section id="contact" className="section-padding">
       <div className="container-narrow">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">Get In Touch</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Contact Me</h2>
+          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Get In Touch</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contact Me</h2>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info) => (
-            <Card key={info.title} className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div key={info.title} className="text-center p-6">
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <info.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">{info.title}</h3>
+              <h3 className="font-semibold mb-2 text-foreground">{info.title}</h3>
               <a
                 href={info.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 {info.value}
               </a>
-            </Card>
+            </div>
           ))}
         </div>
 
-        <Card className="p-8 max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto bg-secondary/20 p-8 rounded-lg">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Your Name
-                </label>
-                <Input id="name" placeholder="John Doe" required />
+                <Input 
+                  id="name" 
+                  placeholder="Your Name" 
+                  required 
+                  className="bg-background"
+                />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Your Email
-                </label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="Your Email"
                   required
+                  className="bg-background"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="subject" className="text-sm font-medium">
-                Subject
-              </label>
-              <Input id="subject" placeholder="Project Discussion" required />
-            </div>
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
-                Message
-              </label>
-              <Textarea
-                id="message"
-                placeholder="Tell me about your project..."
-                rows={6}
-                required
+              <Input 
+                id="subject" 
+                placeholder="Subject" 
+                required 
+                className="bg-background"
               />
             </div>
-            <Button type="submit" size="lg" className="w-full gap-2">
-              <Send className="h-5 w-5" />
+            <div className="space-y-2">
+              <Textarea
+                id="message"
+                placeholder="Message"
+                rows={6}
+                required
+                className="bg-background resize-none"
+              />
+            </div>
+            <Button type="submit" size="lg" className="w-full sm:w-auto gap-2">
+              <Send className="h-4 w-4" />
               Send Message
             </Button>
           </form>
-        </Card>
+        </div>
       </div>
     </section>
   );
