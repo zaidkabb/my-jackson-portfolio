@@ -1,8 +1,9 @@
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { supabase } from "@/integrations/supabase/client";
 
 const ChatbotButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,11 @@ const ChatbotButton = () => {
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
-    { role: "bot", text: "Hi! How can I help you today?" },
+    { role: "assistant", text: "Hi! I'm Zaid Fuad, a Software, Data & AI Engineer. Feel free to ask me anything about my experience, skills, or background!" },
   ]);
+  const [isLoading, setIsLoading] = useState(false);
   const buttonRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Set initial position (bottom right corner)
@@ -69,20 +72,43 @@ const ChatbotButton = () => {
     }
   }, [isDragging, dragStart]);
 
-  const handleSendMessage = () => {
-    if (!message.trim()) return;
+  const handleSendMessage = async () => {
+    if (!message.trim() || isLoading) return;
     
-    setMessages([...messages, { role: "user", text: message }]);
+    const userMessage = message;
+    const newMessages = [...messages, { role: "user", text: userMessage }];
+    setMessages(newMessages);
     setMessage("");
+    setIsLoading(true);
     
-    // Simulate bot response
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke('chat', {
+        body: {
+          messages: newMessages.map(msg => ({
+            role: msg.role === "assistant" ? "assistant" : "user",
+            content: msg.text
+          }))
+        }
+      });
+
+      if (error) throw error;
+
+      const assistantMessage = data?.choices?.[0]?.message?.content || "I'm sorry, I couldn't process that.";
+      setMessages(prev => [...prev, { role: "assistant", text: assistantMessage }]);
+    } catch (error) {
+      console.error('Chat error:', error);
       setMessages(prev => [
         ...prev,
-        { role: "bot", text: "Thanks for your message! This is a demo chatbot." },
+        { role: "assistant", text: "Sorry, I'm having trouble connecting right now. Please try again." }
       ]);
-    }, 1000);
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   return (
     <>
@@ -95,7 +121,7 @@ const ChatbotButton = () => {
           <div className="flex items-center justify-between p-4 border-b border-border bg-primary/5 rounded-t-2xl">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="font-semibold text-foreground">Chat Assistant</span>
+              <span className="font-semibold text-foreground">Zaid Fuad</span>
             </div>
             <Button
               size="icon"
@@ -122,10 +148,18 @@ const ChatbotButton = () => {
                         : "bg-muted text-foreground"
                     }`}
                   >
-                    <p className="text-sm">{msg.text}</p>
+                    <p className="text-sm whitespace-pre-wrap">{msg.text}</p>
                   </div>
                 </div>
               ))}
+              {isLoading && (
+                <div className="flex justify-start">
+                  <div className="bg-muted text-foreground p-3 rounded-2xl">
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
             </div>
           </ScrollArea>
 
@@ -139,7 +173,7 @@ const ChatbotButton = () => {
                 onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                 className="flex-1"
               />
-              <Button size="icon" onClick={handleSendMessage}>
+              <Button size="icon" onClick={handleSendMessage} disabled={isLoading || !message.trim()}>
                 <Send className="h-4 w-4" />
               </Button>
             </div>
