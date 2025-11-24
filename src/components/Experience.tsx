@@ -1,5 +1,3 @@
-import { Briefcase } from "lucide-react";
-
 const Experience = () => {
   const experiences = [
     {
@@ -40,33 +38,25 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-secondary/30">
+    <section id="experience" className="section-padding">
       <div className="container-narrow">
         <div className="text-center mb-16">
           <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Experience</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">Work Experience</h2>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-border hidden md:block" />
-          
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative pl-0 md:pl-16">
-                {/* Timeline dot */}
-                <div className="absolute left-[19px] top-2 w-3 h-3 bg-primary rounded-full border-4 border-background hidden md:block" />
-                
-                <div className="bg-background p-6 rounded-lg border border-border hover:shadow-md transition-shadow">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-                    <h3 className="text-lg font-semibold text-foreground">{exp.title}</h3>
-                    <span className="text-sm font-medium text-primary whitespace-nowrap">{exp.year}</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
-                </div>
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div key={index} className="border-b border-border pb-8 last:border-0">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <h3 className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
+                  {exp.title}
+                </h3>
+                <span className="text-base font-medium text-primary">{exp.year}</span>
               </div>
-            ))}
-          </div>
+              <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
