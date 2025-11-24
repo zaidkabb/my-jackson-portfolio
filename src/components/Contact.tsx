@@ -35,8 +35,8 @@ const Contact = () => {
     <section id="contact" className="section-padding">
       <div className="container-narrow">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contact Me</h2>
+          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Get in Touch</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contact</h2>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6 mb-12">

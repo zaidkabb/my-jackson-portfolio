@@ -7,17 +7,17 @@ const About = () => {
     <section id="about" className="section-padding">
       <div className="container-narrow">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">About Me</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Who Am I?</h2>
+          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">About Us</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Who Am I?</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Hi I'm Jackson Ford</strong> On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.
+            <p className="text-base text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">Hi I'm Zaid Fuad</strong> - a Software, Data & AI Engineer based in Asendorf, Germany. With 4 years of experience in the field and 2 years specializing in backend development, I've built my expertise around creating scalable, data-driven solutions.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+            <p className="text-base text-muted-foreground leading-relaxed">
+              My journey started in Freetown, Sierra Leone, where I was born, and led me through completing my BSc in Computer Science at Njala University in 2020. Today, I focus on building multi-agent AI systems, microservices architectures, and cloud-native automation tools using cutting-edge technologies.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6">
@@ -27,17 +27,15 @@ const About = () => {
               { icon: Code, title: "Software" },
               { icon: Smartphone, title: "Application" },
             ].map((skill) => (
-              <div key={skill.title} className="space-y-3">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <skill.icon className="h-6 w-6 text-primary" />
+              <div key={skill.title} className="text-center space-y-3">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <skill.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-semibold">{skill.title}</h3>
+                <h3 className="font-semibold text-sm">{skill.title}</h3>
               </div>
             ))}
           </div>
         </div>
-
-
       </div>
     </section>
   );

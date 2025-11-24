@@ -1,6 +1,7 @@
 import Sidebar from "@/components/Sidebar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Services from "@/components/Services";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Work from "@/components/Work";
@@ -14,6 +15,7 @@ const Index = () => {
       <main className="lg:ml-72">
         <Hero />
         <About />
+        <Services />
         <Education />
         <Experience />
         <Work />
