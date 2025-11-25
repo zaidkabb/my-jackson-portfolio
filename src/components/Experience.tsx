@@ -38,23 +38,23 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding">
+    <section id="experience" className="section-padding bg-secondary/20">
       <div className="container-narrow">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Experience</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Work Experience</h2>
+        <div className="text-center mb-20">
+          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">Experience</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">Work Experience</h2>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {experiences.map((exp, index) => (
-            <div key={index} className="border-b border-border pb-8 last:border-0">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <h3 className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
+            <div key={index} className="border-b border-border/50 pb-12 last:border-0 hover:border-primary/20 transition-all">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                <h3 className="text-2xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
                   {exp.title}
                 </h3>
                 <span className="text-base font-medium text-primary">{exp.year}</span>
               </div>
-              <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
+              <p className="text-muted-foreground leading-relaxed font-light text-lg">{exp.description}</p>
             </div>
           ))}
         </div>
