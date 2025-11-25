@@ -1,36 +1,36 @@
-import { Lightbulb, Code, Smartphone, Palette, Database, Globe } from "lucide-react";
+import { Brain, Code, Cog, Database, Layers, Zap } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Lightbulb,
-      title: "Innovative Ideas",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    },
-    {
-      icon: Code,
-      title: "Software",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    },
-    {
-      icon: Smartphone,
-      title: "Application",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
-    },
-    {
-      icon: Palette,
-      title: "Graphic Design",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+      icon: Brain,
+      title: "AI Solutions",
+      description: "Building intelligent multi-agent AI systems and machine learning solutions",
     },
     {
       icon: Database,
-      title: "Software",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+      title: "Data Engineering",
+      description: "Designing scalable data pipelines and analytics infrastructure",
     },
     {
-      icon: Globe,
-      title: "Application",
-      description: "Separated they live in Bookmarksgrove right at the coast of the Semantics",
+      icon: Cog,
+      title: "Automation",
+      description: "Creating cloud-native automation tools and workflow optimization",
+    },
+    {
+      icon: Code,
+      title: "Backend Development",
+      description: "Developing robust microservices architectures and APIs",
+    },
+    {
+      icon: Layers,
+      title: "Full Stack Development",
+      description: "Building end-to-end web applications with modern technologies",
+    },
+    {
+      icon: Zap,
+      title: "No-Code Solutions",
+      description: "Rapid prototyping and development using no-code platforms",
     },
   ];
 
