@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Palette, Monitor, Code, Smartphone } from "lucide-react";
+import { Brain, Database, Cog, Code } from "lucide-react";
 
 const About = () => {
 
@@ -22,10 +22,10 @@ const About = () => {
           </div>
           <div className="grid grid-cols-2 gap-6">
             {[
-              { icon: Palette, title: "Graphic Design" },
-              { icon: Monitor, title: "Web Design" },
-              { icon: Code, title: "Software" },
-              { icon: Smartphone, title: "Application" },
+              { icon: Brain, title: "AI & Data Engineering" },
+              { icon: Database, title: "Backend Development" },
+              { icon: Cog, title: "Automation" },
+              { icon: Code, title: "Full Stack" },
             ].map((skill) => (
               <div key={skill.title} className="text-center space-y-3">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
