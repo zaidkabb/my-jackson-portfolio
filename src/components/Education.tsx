@@ -35,30 +35,30 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="section-padding bg-secondary/30">
+    <section id="education" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">Education</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Education</h2>
+        <div className="text-center mb-20">
+          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">Education</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">Education</h2>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-6">
           {education.map((item) => (
             <AccordionItem
               key={item.id}
               value={item.id}
-              className="bg-background rounded-lg px-6 border"
+              className="bg-secondary/20 rounded-sm px-8 py-2 border border-border/50 hover:border-primary/20 transition-all"
             >
               <AccordionTrigger className="hover:no-underline">
                 <div className="text-left">
-                  <h3 className="text-lg font-bold">{item.degree}</h3>
-                  <p className="text-sm text-muted-foreground">{item.year}</p>
+                  <h3 className="text-xl font-bold">{item.degree}</h3>
+                  <p className="text-sm text-muted-foreground font-light">{item.year}</p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pt-4">
+              <AccordionContent className="text-muted-foreground pt-6 font-light leading-relaxed">
                 <p>{item.description}</p>
                 {item.points && (
-                  <ul className="list-disc list-inside mt-4 space-y-2">
+                  <ul className="list-disc list-inside mt-6 space-y-2">
                     {item.points.map((point, idx) => (
                       <li key={idx}>{point}</li>
                     ))}

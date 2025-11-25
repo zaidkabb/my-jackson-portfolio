@@ -32,23 +32,23 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-secondary/20">
       <div className="container-narrow">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2 uppercase tracking-wider text-sm">Get in Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contact</h2>
+        <div className="text-center mb-20">
+          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">Get in Touch</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">Contact</h2>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {contactInfo.map((info) => (
-            <div key={info.title} className="text-center p-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <info.icon className="h-6 w-6 text-primary" />
+            <div key={info.title} className="text-center p-8 bg-background rounded-sm border border-border/50 hover:border-primary/20 transition-all hover:shadow-lg">
+              <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                <info.icon className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2 text-foreground">{info.title}</h3>
+              <h3 className="font-bold mb-3 text-foreground text-lg">{info.title}</h3>
               <a
                 href={info.href}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                className="text-muted-foreground hover:text-primary transition-colors text-sm font-light"
               >
                 {info.value}
               </a>
@@ -56,15 +56,15 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto bg-secondary/20 p-8 rounded-lg">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid sm:grid-cols-2 gap-6">
+        <div className="max-w-3xl mx-auto bg-background p-12 rounded-sm border border-border/50">
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <Input 
                   id="name" 
                   placeholder="Your Name" 
                   required 
-                  className="bg-background"
+                  className="bg-secondary/20 border-border/50 h-12 rounded-sm"
                 />
               </div>
               <div className="space-y-2">
@@ -73,7 +73,7 @@ const Contact = () => {
                   type="email"
                   placeholder="Your Email"
                   required
-                  className="bg-background"
+                  className="bg-secondary/20 border-border/50 h-12 rounded-sm"
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                 id="subject" 
                 placeholder="Subject" 
                 required 
-                className="bg-background"
+                className="bg-secondary/20 border-border/50 h-12 rounded-sm"
               />
             </div>
             <div className="space-y-2">
@@ -91,11 +91,11 @@ const Contact = () => {
                 placeholder="Message"
                 rows={6}
                 required
-                className="bg-background resize-none"
+                className="bg-secondary/20 border-border/50 resize-none rounded-sm"
               />
             </div>
-            <Button type="submit" size="lg" className="w-full sm:w-auto gap-2">
-              <Send className="h-4 w-4" />
+            <Button type="submit" size="lg" className="w-full sm:w-auto gap-2 px-8 py-6 text-base rounded-sm shadow-lg hover:shadow-xl transition-all">
+              <Send className="h-5 w-5" />
               Send Message
             </Button>
           </form>

@@ -70,43 +70,43 @@ const Work = () => {
   ];
 
   return (
-    <section id="work" className="section-padding">
+    <section id="work" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-bold">My Recent Work</h2>
+        <div className="text-center mb-20">
+          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">Portfolio</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">My Recent Work</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-300"
+              className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-border/50 rounded-sm"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 flex items-center gap-2 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                  <div className="p-6 flex items-center gap-2 text-white">
                     <ExternalLink className="h-5 w-5" />
                     <span className="font-medium">View Project</span>
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="text-sm text-primary font-semibold mb-2">
+              <div className="p-8">
+                <p className="text-xs text-primary font-semibold mb-3 uppercase tracking-wider">
                   {project.category}
                 </p>
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                <p className="text-muted-foreground mb-6 text-sm leading-relaxed font-light">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
+                    <Badge key={tag} variant="secondary" className="text-xs font-normal">
                       {tag}
                     </Badge>
                   ))}
