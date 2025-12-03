@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-10 section-padding w-full lg:w-1/2">
         <div className="space-y-8 max-w-2xl animate-fade-in">
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4">
+            <h1 className="text-6xl md:text-8xl font-bold leading-[1.1] tracking-tight mb-4">
               Hi!
               <br />
               <span className="text-foreground">I'm </span>
