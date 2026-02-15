@@ -33,10 +33,12 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex gap-4 pt-2">
-            <Button size="lg" className="gap-2 px-8 py-6 text-base rounded-sm shadow-lg hover:shadow-xl transition-all">
-              <Download className="h-5 w-5" />
-              Download CV
-            </Button>
+            <a href="/Zaid_Fuad_Kabba_CV.pdf" download>
+              <Button size="lg" className="gap-2 px-8 py-6 text-base rounded-sm shadow-lg hover:shadow-xl transition-all">
+                <Download className="h-5 w-5" />
+                Download CV
+              </Button>
+            </a>
           </div>
         </div>
       </div>
