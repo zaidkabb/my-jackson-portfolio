@@ -9,28 +9,19 @@ const Education = () => {
   const education = [
     {
       id: "1",
-      degree: "Master Degree Graphic Design",
-      year: "2015-2016",
+      degree: "IT Engineering (Incomplete)",
+      institution: "FH Wedel – University of Applied Sciences",
+      year: "",
       description:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "Pursued studies in IT Engineering at FH Wedel, University of Applied Sciences in Germany.",
     },
     {
       id: "2",
-      degree: "Bachelor Degree of Computer Science",
-      year: "2014-2015",
+      degree: "Bachelor of Science in Computer Science",
+      institution: "Njala University",
+      year: "",
       description:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-      points: [
-        "Separated they live in Bookmarksgrove right",
-        "Separated they live in Bookmarksgrove right",
-      ],
-    },
-    {
-      id: "3",
-      degree: "Diploma in Information Technology",
-      year: "2013-2014",
-      description:
-        "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "Completed a Bachelor's degree in Computer Science at Njala University, building a strong foundation in software development, algorithms, and systems design.",
     },
   ];
 
@@ -52,18 +43,11 @@ const Education = () => {
               <AccordionTrigger className="hover:no-underline">
                 <div className="text-left">
                   <h3 className="text-xl font-bold">{item.degree}</h3>
-                  <p className="text-sm text-muted-foreground font-light">{item.year}</p>
+                  <p className="text-sm text-muted-foreground font-light">{item.institution}</p>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pt-6 font-light leading-relaxed">
                 <p>{item.description}</p>
-                {item.points && (
-                  <ul className="list-disc list-inside mt-6 space-y-2">
-                    {item.points.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ul>
-                )}
               </AccordionContent>
             </AccordionItem>
           ))}
