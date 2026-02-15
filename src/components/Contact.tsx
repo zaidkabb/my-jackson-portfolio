@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -20,6 +20,13 @@ const Contact = () => {
       value: "Braunschweig, Germany",
       href: "https://maps.google.com/?q=Braunschweig,Germany",
     },
+  ];
+
+  const socialLinks = [
+    { icon: Linkedin, href: "https://linkedin.com/in/", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/", label: "GitHub" },
+    { icon: Mail, href: "mailto:zaidfuad91@gmail.com", label: "Email" },
+    { icon: MessageCircle, href: "https://wa.me/4915212883712", label: "WhatsApp" },
   ];
 
   return (
@@ -48,6 +55,27 @@ const Contact = () => {
           ))}
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-20 pt-10 border-t border-border/30">
+        <div className="flex justify-center items-center gap-6">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+              className="w-11 h-11 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all"
+            >
+              <link.icon className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
+        <p className="text-center text-muted-foreground/60 text-xs mt-6 pb-4">
+          © {new Date().getFullYear()} Zaid Fuad Kabba. All rights reserved.
+        </p>
+      </footer>
     </section>
   );
 };
