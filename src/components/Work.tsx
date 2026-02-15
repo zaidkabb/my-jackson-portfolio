@@ -5,46 +5,46 @@ import { ExternalLink } from "lucide-react";
 const Work = () => {
   const projects = [
     {
-      title: "No-Code CRM Platform",
+      title: "Restaurant Receptionist App",
       category: "No-Code",
-      description: "Custom CRM solution built with Lovable and Vapi for a local restaurant receptionist.",
+      description: "An AI-powered web app that acts as a restaurant receptionist — takes orders via voice and logs them into a calendar automatically.",
       tags: ["Lovable", "Vapi"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      image: "/images/restaurant-receptionist.jpg",
     },
     {
       title: "Discover Hamburg City",
       category: "Mobile Development",
       description: "An AI agent event app that shows current events, lets you chat with it, displays locations and transport options to get there.",
       tags: ["Spring Boot", "Spring AI", "DeepSeek"],
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+      image: "/images/discover-hamburg.jpg",
     },
     {
       title: "Logistics App",
       category: "Full Stack",
       description: "End-to-end logistics management application for tracking and managing shipments.",
       tags: ["Spring Boot", "Next.js", "PostgreSQL", "Docker", "Render"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      image: "/images/logistics-app.jpg",
     },
     {
       title: "Data Pipeline System",
       category: "Data Engineering",
       description: "Scalable ETL pipeline for processing large-scale data streams in real-time.",
       tags: ["Apache Spark", "Kafka", "Python"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      image: "/images/data-pipeline.jpg",
     },
     {
       title: "Microservices API",
       category: "Backend Development",
       description: "RESTful API architecture with microservices for enterprise applications.",
       tags: ["Node.js", "Express", "Redis"],
-      image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800&h=600&fit=crop",
+      image: "/images/microservices-api.jpg",
     },
     {
       title: "ML Model Deployment",
       category: "AI Solutions",
       description: "End-to-end machine learning pipeline with automated model training and deployment.",
       tags: ["PyTorch", "MLflow", "Docker"],
-      image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=800&h=600&fit=crop",
+      image: "/images/ml-deployment.jpg",
     },
   ];
 
