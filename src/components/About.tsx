@@ -23,9 +23,9 @@ const About = () => {
           <div className="grid grid-cols-2 gap-8">
             {[
               { icon: Brain, title: "AI & Data Engineering" },
-              { icon: Database, title: "Backend Development" },
-              { icon: Cog, title: "Automation" },
-              { icon: Code, title: "Full Stack" },
+              { icon: Database, title: "Backend & Cloud" },
+              { icon: Cog, title: "Databricks & Terraform" },
+              { icon: Code, title: "GCP & DevOps" },
             ].map((skill) => (
               <div key={skill.title} className="text-center space-y-4 group">
                 <div className="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto transition-all group-hover:bg-primary/10 group-hover:scale-110 duration-300">
