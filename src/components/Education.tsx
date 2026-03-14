@@ -19,7 +19,7 @@ const Education = () => {
       id: "2",
       degree: "Bachelor of Science in Computer Science",
       institution: "Njala University",
-      year: "",
+      year: "September 2015 – October 2019",
       description:
         "Completed a Bachelor's degree in Computer Science at Njala University, building a strong foundation in software development, algorithms, and systems design.",
     },
