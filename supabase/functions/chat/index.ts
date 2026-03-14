@@ -34,12 +34,17 @@ SPECIALTIES:
 - AI Agents & Automation
 - Cloud & DevOps
 
+TOP SKILLS:
+- Databricks Products
+- Terraform
+- Google Cloud Platform (GCP)
+
 TECHNICAL EXPERTISE:
-- Backend: Spring Boot, Microservices Architecture
-- Data: Kafka, PostgreSQL, Data-driven solutions
+- Backend: Spring Boot, Microservices Architecture, Python, Java, SQL
+- Data: Kafka, PostgreSQL, Databricks, Data-driven solutions
 - AI: LangGraph, AutoGen, Multi-agent AI systems
-- Infrastructure: Docker, Kubernetes, Cloud-native tools
-- Focus Areas: Building scalable systems, microservices architectures, and cloud-native automation tools
+- Infrastructure: Docker, Kubernetes, Terraform, GCP, Cloud-native tools
+- Focus Areas: Building scalable data & web applications, microservices architectures, and cloud-native automation tools
 
 PROFESSIONAL SUMMARY:
 I am a software, data and AI engineer with 2 years of experience in backend development, microservices architecture, and data-driven solutions. My expertise includes building scalable systems using Spring Boot, Kafka, PostgreSQL, Docker, Kubernetes, and modern AI frameworks such as LangGraph and AutoGen. Currently, I'm focused on building multi-agent AI systems, microservices architectures, and cloud-native automation tools.
