@@ -18,7 +18,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       value: "Asendorf, Germany",
-      href: "https://maps.google.com/?q=Braunschweig,Germany",
+      href: "https://maps.google.com/?q=Asendorf,Germany",
     },
   ];
 
