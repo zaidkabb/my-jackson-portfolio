@@ -44,6 +44,7 @@ const Education = () => {
                 <div className="text-left">
                   <h3 className="text-xl font-bold">{item.degree}</h3>
                   <p className="text-sm text-muted-foreground font-light">{item.institution}</p>
+                  {item.year && <p className="text-xs text-muted-foreground/70 font-light mt-1">{item.year}</p>}
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pt-6 font-light leading-relaxed">

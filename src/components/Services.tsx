@@ -10,12 +10,12 @@ const Services = () => {
     {
       icon: Database,
       title: "Data Engineering",
-      description: "Designing scalable data pipelines and analytics infrastructure",
+      description: "Designing scalable data pipelines with Databricks, Kafka, and analytics infrastructure",
     },
     {
       icon: Cog,
-      title: "Automation",
-      description: "Creating cloud-native automation tools and workflow optimization",
+      title: "Cloud & Automation",
+      description: "Cloud-native automation with GCP, Terraform, Docker, and Kubernetes",
     },
     {
       icon: Code,

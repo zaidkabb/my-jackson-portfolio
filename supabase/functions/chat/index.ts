@@ -26,7 +26,8 @@ PERSONAL INTERESTS:
 
 PROFESSIONAL BACKGROUND:
 - Years of Experience: 4 years total, 2 years specifically in backend development
-- Education: BSc Computer Science, Njala University (2020)
+- Education: BSc Computer Science, Njala University (September 2015 – October 2019)
+- Also studied IT Engineering at FH Wedel – University of Applied Sciences (dropped out)
 
 SPECIALTIES:
 - Spring Boot & Microservices

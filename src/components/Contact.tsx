@@ -23,8 +23,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com/in/", label: "LinkedIn" },
-    { icon: Github, href: "https://github.com/", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/zaid-fuad-243a27188", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/zaidfuad91", label: "GitHub" },
     { icon: Mail, href: "mailto:zaidfuad91@gmail.com", label: "Email" },
     { icon: MessageCircle, href: "https://wa.me/4915212883712", label: "WhatsApp" },
   ];
