@@ -7,7 +7,7 @@ const About = () => {
     <section id="about" className="section-padding">
       <div className="container-narrow">
         <div className="text-center mb-20">
-          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">About Us</p>
+          <p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs"><p className="text-primary font-semibold mb-3 uppercase tracking-[0.2em] text-xs">About Me</p></p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">Who Am I?</h2>
         </div>
 
