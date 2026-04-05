@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
 const Work = () => {
-  const projects = [
+  const projects: { title: string; category: string; description: string; tags: string[]; image: string; link?: string }[] = [
     {
       title: "Restaurant Receptionist App",
       category: "No-Code",
