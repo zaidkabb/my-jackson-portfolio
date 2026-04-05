@@ -10,6 +10,7 @@ const Work = () => {
       description: "An AI-powered web app that acts as a restaurant receptionist — takes orders via voice and logs them into a calendar automatically.",
       tags: ["Lovable", "Vapi"],
       image: "/images/restaurant-receptionist.jpg",
+      link: "https://zaidservice.lovable.app",
     },
     {
       title: "Discover Hamburg City",
