@@ -58,42 +58,47 @@ const Work = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {projects.map((project) => (
-            <Card
-              key={project.title}
-              className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-border/50 rounded-sm"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-                  <div className="p-6 flex items-center gap-2 text-white">
-                    <ExternalLink className="h-5 w-5" />
-                    <span className="font-medium">View Project</span>
+          {projects.map((project) => {
+            const CardWrapper = project.link ? 'a' : 'div';
+            const wrapperProps = project.link ? { href: project.link, target: "_blank", rel: "noopener noreferrer" } : {};
+            return (
+              <CardWrapper key={project.title} {...wrapperProps}>
+                <Card
+                  className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 border-border/50 rounded-sm h-full"
+                >
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                      <div className="p-6 flex items-center gap-2 text-white">
+                        <ExternalLink className="h-5 w-5" />
+                        <span className="font-medium">{project.link ? "Visit App" : "View Project"}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="p-8">
-                <p className="text-xs text-primary font-semibold mb-3 uppercase tracking-wider">
-                  {project.category}
-                </p>
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                <p className="text-muted-foreground mb-6 text-sm leading-relaxed font-light">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs font-normal">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          ))}
+                  <div className="p-8">
+                    <p className="text-xs text-primary font-semibold mb-3 uppercase tracking-wider">
+                      {project.category}
+                    </p>
+                    <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                    <p className="text-muted-foreground mb-6 text-sm leading-relaxed font-light">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary" className="text-xs font-normal">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </CardWrapper>
+            );
+          })}
         </div>
       </div>
     </section>
