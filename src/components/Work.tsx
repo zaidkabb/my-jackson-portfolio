@@ -13,6 +13,14 @@ const Work = () => {
       link: "https://zaidservice.lovable.app",
     },
     {
+      title: "Radio Music Streaming",
+      category: "No-Code",
+      description: "A live radio music streaming web app with curated FM vibes and smooth playback experience.",
+      tags: ["Lovable"],
+      image: "/images/radio-streaming.jpg",
+      link: "https://zaidicus-fm-vibes.lovable.app",
+    },
+    {
       title: "Discover Hamburg City",
       category: "Mobile Development",
       description: "An AI agent event app that shows current events, lets you chat with it, displays locations and transport options to get there.",
